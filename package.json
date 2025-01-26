@@ -1,0 +1,36 @@
+{
+  "name": "@canvas-playground/app",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "commit": "git-cz",
+    "lint": "eslint './{apps,packages}/**/*.{ts,tsx}'",
+    "test": "vitest",
+    "start": "pnpm --dir apps/client start",
+    "version": "node_modules/.bin/conventional-changelog -i CHANGELOG.md -o CHANGELOG.md -p angular && git add -A CHANGELOG.md"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.10.10",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.19.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.21.0",
+    "vite": "^6.0.11",
+    "vitest": "^3.0.4"
+  }
+}

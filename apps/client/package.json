@@ -1,0 +1,12 @@
+{
+  "name": "@canvas-playground/client",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "test": "pnpm -w t -- --selectProjects=\"client\""
+  }
+}
