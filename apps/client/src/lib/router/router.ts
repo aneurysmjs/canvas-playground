@@ -13,12 +13,14 @@ export default function router(routesMap: Record<string, string>) {
 
   const handleLocation = async () => {
     const path = window.location.pathname;
-    console.log("paths", path);
 
     const route = routesMap[path] ?? "404";
 
     try {
-      const component = await import(`../../pages/${route}.ts`);
+      /**
+       * @see https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#how-it-works
+       */
+      const component = await import(`../../app/${route}/Page.ts`);
 
       const outlet = document.querySelector("#route-outlet");
 
