@@ -7,8 +7,33 @@
     <link href="/dist/styles.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-white dark:bg-gray-900">
+  <body class="bg-white dark:bg-neutral-900 h-screen">
     <div id="app"></div>
+
+    <nav
+      id="main-nav"
+      class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 shadow sm:items-baseline w-full"
+    >
+      <div class="mb-2 sm:mb-0">
+        <a
+          href="/"
+          class="text-2xl no-underline text-white hover:text-blue-dark"
+          onclick="route()"
+          >Home</a
+        >
+      </div>
+      <div>
+        <a
+          href="/about"
+          class="text-lg no-underline text-white hover:text-blue-dark ml-2"
+          onclick="route()"
+          >About</a
+        >
+      </div>
+    </nav>
+
+    <div id="route-outlet"></div>
+
     <script type="module" src="./src/main.ts"></script>
   </body>
 </html>

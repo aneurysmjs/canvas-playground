@@ -1,3 +1,10 @@
 import "./assets/css/styles.css";
 
-console.log("main");
+import router from "./lib/router/router.js";
+
+const routesMap = {
+  "/": "home",
+  "/about": "about",
+};
+
+router(routesMap);
