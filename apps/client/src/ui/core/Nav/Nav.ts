@@ -1,3 +1,5 @@
+import routesMap from "@/routes/routesMap.js";
+
 function nav(strings: TemplateStringsArray, personExp = 0, ageExp = 0) {
   console.log("strings", strings);
 
@@ -12,6 +14,8 @@ function nav(strings: TemplateStringsArray, personExp = 0, ageExp = 0) {
 }
 
 const Nav = () => {
+  const keys = Object.keys(routesMap);
+
   const output = nav`
     <template id="itemTemplate">
       <div class="item">
@@ -20,6 +24,17 @@ const Nav = () => {
       </div>
     </template>
   `;
+
+  const links = keys.slice(1).reduce((acc, key) => {
+    acc += `<a
+          href="${routesMap[key]}"
+          class="text-lg no-underline text-white hover:text-blue-dark ml-2"
+          onclick="route()"
+          >${routesMap[key]}</a
+        >`;
+
+    return acc;
+  }, "");
 
   return `
     <nav
@@ -35,12 +50,14 @@ const Nav = () => {
         >
       </div>
       <div>
-        <a
+        <!--<a
           href="/about"
           class="text-lg no-underline text-white hover:text-blue-dark ml-2"
           onclick="route()"
           >About</a
-        >
+        >-->
+
+        ${links}
       </div>
     </nav>
 `;
