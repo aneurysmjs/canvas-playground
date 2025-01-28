@@ -1,4 +1,8 @@
+import { componentStack } from "@/lib/renderer/internals.js";
+
 const useMount = (callback: () => void) => {
+  console.log("componentStack", componentStack);
+
   const observer = new MutationObserver((mutationsList, observer) => {
     for (const mutation of mutationsList) {
       if (mutation.type === "childList") {

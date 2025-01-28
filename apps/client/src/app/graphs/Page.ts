@@ -1,4 +1,4 @@
-import useMount from "@/lib/renderer/useMount.js";
+import useMount from "@/lib/renderer/hooks/useMount/index.js";
 
 interface Link {
   source: string;

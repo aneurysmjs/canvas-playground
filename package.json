@@ -8,6 +8,7 @@
     "lint": "eslint './{apps,packages}/**/*.{ts,tsx}'",
     "test": "vitest",
     "start": "pnpm --dir apps/client start",
+    "cookbook": "pnpm --dir apps/cookbook start",
     "version": "node_modules/.bin/conventional-changelog -i CHANGELOG.md -o CHANGELOG.md -p angular && git add -A CHANGELOG.md"
   },
   "config": {

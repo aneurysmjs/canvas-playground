@@ -1,0 +1,3 @@
+const componentStack = [];
+
+export { componentStack };

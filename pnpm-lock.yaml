@@ -53,6 +53,8 @@ importers:
 
   apps/client: {}
 
+  apps/cookbook: {}
+
 packages:
 
   '@alloc/quick-lru@5.2.0':
